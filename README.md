@@ -19,11 +19,11 @@ Uses [**Conda**](https://conda.io/en/latest/) (installed with [Miniconda](https:
 
 Includes optional variants with [**Nvidia CUDA**](https://www.geforce.com/hardware/technology/cuda).
 
-And optional variants with [**TensorFlow](https://www.tensorflow.org/).
+And optional variants with [**TensorFlow**](https://www.tensorflow.org/).
 
 **GitHub repo**: <https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker>
 
-**Docker Hub image**: <https://hub.docker.com/r/tiangolo/uvicorn-gunicorn/>
+**Docker Hub image**: <https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-machine-learning/>
 
 
 ## Description
@@ -103,16 +103,15 @@ This image will set a sensible configuration based on the server it is running o
 
 It has sensible defaults, but you can configure it with environment variables or override the configuration files.
 
+<!--
+
 ### Frameworks
 
 This image was created to be the base image for:
 
-* [**tiangolo/uvicorn-gunicorn-starlette**](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker)
-* [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker)
+* [**tiangolo/uvicorn-gunicorn-fastapi-machine-learning**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-machine-learning-docker)
 
-But could be used as the base image to run any Python web application that uses the ASGI specification.
-
-If you are creating a new [**Starlette**](https://www.starlette.io/) web application you should use [**tiangolo/uvicorn-gunicorn-starlette**](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker) instead.
+But could be used as the base image to run any Python web application that uses the ASGI specification for Machine Learning.
 
 If you are creating a new [**FastAPI**](https://fastapi.tiangolo.com/) web application you should use [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker) instead.
 
@@ -120,6 +119,7 @@ If you are creating a new [**FastAPI**](https://fastapi.tiangolo.com/) web appli
 
 **Note**: Unless you are doing something more technically advanced, you probably should be using [**Starlette**](https://www.starlette.io/) with [**tiangolo/uvicorn-gunicorn-starlette**](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker) or [**FastAPI**](https://fastapi.tiangolo.com/) with [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
 
+-->
 
 ## How to use
 
