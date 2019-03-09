@@ -1,4 +1,6 @@
-FROM tiangolo/python-machine-learning:cuda9.1-python3.6-tensorflow
+# FROM tiangolo/python-machine-learning:cuda9.1-python3.6-tensorflow
+# TODO fix this
+FROM tiangolo/python-machine-learning:cuda9.1-python3.6
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
