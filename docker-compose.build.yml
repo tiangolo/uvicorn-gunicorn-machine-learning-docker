@@ -15,6 +15,9 @@ services:
   cuda9.1-python3.6:
     build: ./cuda9.1-python3.6
     image: tiangolo/uvicorn-gunicorn-machine-learning:cuda9.1-python3.6
+  cuda9.1-devel-python3.6:
+    build: ./cuda9.1-devel-python3.6
+    image: tiangolo/uvicorn-gunicorn-machine-learning:cuda9.1-devel-python3.6
   python3.6-tensorflow:
     build: ./python3.6-tensorflow
     image: tiangolo/uvicorn-gunicorn-machine-learning:python3.6-tensorflow
