@@ -8,6 +8,8 @@
 * [`python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/python3.6-tensorflow/Dockerfile)
 * [`cuda9.1-python3.7` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-python3.7/Dockerfile)
 * [`cuda9.1-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-python3.6/Dockerfile)
+* [`cuda9.1-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-devel-python3.6/Dockerfile)
+* [`cuda9.1-cudnn7-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-cudnn7-devel-python3.6/Dockerfile)
 * [`cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-python3.6-tensorflow/Dockerfile)
 
 
@@ -545,6 +547,10 @@ bash scripts/test-cuda.sh
 ```
 
 ## Release Notes
+
+### Next
+
+* Add CUDA and cuDNN image tags for projects that require building with CUDA toolkit (like [dlib](http://dlib.net/)). PR <a href="https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/pull/1" target="_blank">#1</a>.
 
 ### 0.1.0
 
