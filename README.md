@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/tiangolo/uvicorn-gunicorn-machine-learning-docker.svg?branch=master)](https://travis-ci.org/tiangolo/uvicorn-gunicorn-machine-learning-docker)
 
-
 ## Supported tags and respective `Dockerfile` links
 
 * [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/python3.7/Dockerfile)
@@ -12,7 +11,6 @@
 * [`cuda9.1-cudnn7-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-cudnn7-devel-python3.6/Dockerfile)
 * [`cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-python3.6-tensorflow/Dockerfile)
 
-
 # uvicorn-gunicorn-machine-learning
 
 [**Docker**](https://www.docker.com/) image with [**Uvicorn**](https://www.uvicorn.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning.
@@ -23,10 +21,9 @@ Includes optional variants with [**Nvidia CUDA**](https://www.geforce.com/hardwa
 
 And optional variants with [**TensorFlow**](https://www.tensorflow.org/).
 
-**GitHub repo**: <https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker>
+**GitHub repo**: [https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker)
 
-**Docker Hub image**: <https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-machine-learning/>
-
+**Docker Hub image**: [https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-machine-learning/](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-machine-learning/)
 
 ## Description
 
@@ -49,7 +46,6 @@ By being slim, apart from reducing the size, it can be kept current more easily,
 **Uvicorn** is a lightning-fast "ASGI" server.
 
 It runs asynchronous Python web code in a single process.
-
 
 ### Gunicorn
 
@@ -159,7 +155,6 @@ You should be able to check it in your Docker container's URL, for example: http
 
 These are the environment variables that you can set in the container to configure it and their default values:
 
-
 #### `MODULE_NAME`
 
 The Python "module" (file) to be imported by Gunicorn, this module would contain the actual application in a variable.
@@ -174,7 +169,6 @@ For example, if your main file was at `/app/custom_app/custom_main.py`, you coul
 ```bash
 docker run -d -p 80:80 -e MODULE_NAME="custom_app.custom_main" myimage
 ```
-
 
 #### `VARIABLE_NAME`
 
@@ -202,7 +196,6 @@ In this case `api` would be the variable with the "ASGI application". You could 
 docker run -d -p 80:80 -e VARIABLE_NAME="api" myimage
 ```
 
-
 #### `APP_MODULE`
 
 The string with the Python module and the variable name passed to Gunicorn.
@@ -217,7 +210,6 @@ You can set it like:
 ```bash
 docker run -d -p 80:80 -e APP_MODULE="custom_app.custom_main:api" myimage
 ```
-
 
 #### `GUNICORN_CONF`
 
@@ -234,7 +226,6 @@ You can set it like:
 ```bash
 docker run -d -p 80:80 -e GUNICORN_CONF="/app/custom_gunicorn_conf.py" myimage
 ```
-
 
 #### `WORKERS_PER_CORE`
 
@@ -266,7 +257,6 @@ In a server with 8 CPU cores, this would make it start only 4 worker processes.
 
 **Note**: By default, if `WORKERS_PER_CORE` is `1` and the server has only 1 CPU core, instead of starting 1 single worker, it will start 2. This is to avoid bad performance and blocking applications (server application) on small machines (server machine/cloud/etc). This can be overridden using `WEB_CONCURRENCY`.
 
-
 #### `WEB_CONCURRENCY`
 
 Override the automatic definition of number of workers.
@@ -282,7 +272,6 @@ docker run -d -p 80:80 -e WEB_CONCURRENCY="2" myimage
 ```
 
 This would make the image start 2 worker processes, independent of how many CPU cores are available in the server.
-
 
 #### `HOST`
 
@@ -314,7 +303,6 @@ You can set it like:
 docker run -d -p 80:8080 -e PORT="8080" myimage
 ```
 
-
 #### `BIND`
 
 The actual host and port passed to Gunicorn.
@@ -322,7 +310,7 @@ The actual host and port passed to Gunicorn.
 By default, set based on the variables `HOST` and `PORT`.
 
 So, if you didn't change anything, it will be set by default to:
-    
+
 * `0.0.0.0:80`
 
 You can set it like:
@@ -330,7 +318,6 @@ You can set it like:
 ```bash
 docker run -d -p 80:8080 -e BIND="0.0.0.0:8080" myimage
 ```
-
 
 #### `LOG_LEVEL`
 
@@ -365,7 +352,6 @@ You can override it by including a file in:
 * `/app/gunicorn_conf.py`
 * `/app/app/gunicorn_conf.py`
 * `/gunicorn_conf.py`
-
 
 ### Custom `/app/prestart.sh`
 
@@ -517,7 +503,6 @@ Then you can get the latest tag (version) of this image that is less than or equ
 Next, find which versions of `cudatoolkit` (CUDA) are available in `conda`. Choose the latest one that is less than or equal to the image you chose.
 
 Then you can install TensorFlow with that `cudatoolkit`.
-
 
 ## Tests
 
