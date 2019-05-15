@@ -548,7 +548,9 @@ bash scripts/test-cuda.sh
 
 ## Release Notes
 
-### Next
+### Next Release
+
+* Upgrade Travis. PR [#2](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/pull/2).
 
 * Add CUDA and cuDNN image tags for projects that require building with CUDA toolkit (like [dlib](http://dlib.net/)). PR <a href="https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/pull/1" target="_blank">#1</a>.
 
