@@ -67,6 +67,7 @@ For example, to install Pandas, you can run:
 conda install pandas
 ```
 
+
 In a `Dockerfile` you would add that with:
 
 ```Dockerfile
@@ -76,6 +77,53 @@ RUN conda install -y pandas
 `conda` is especially useful for Machine Learning and Data Science (compared to other package managers like `pip`, `pipenv`) because in many cases it installs optimized versions, compiled with **Intel MKL** (which is not available via `pip`).
 
 For example, TensorFlow is compiled with [**Intel MKL-DNN**](https://www.anaconda.com/tensorflow-in-anaconda/), which gives up to 8x the performance achievable with `pip`.
+
+#### Conda with environment.yml
+If you would like to use conda with an 
+[environment.yml](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) file,
+you can do so by overwriting the `base` environment.
+
+Following lines have to be added to `Dockerfile`:
+
+```Dockerfile
+WORKDIR /
+COPY environment.yml /
+RUN conda env update --name base --file environment.yml --prune
+```
+
+The corresponding `environment.yml` can be saved to your root and may look like 
+this (depending on what you would like to install):
+
+```YAML
+name: null
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  ##### Basic packages
+  - pip
+  - pydantic
+
+  ##### Core scientific packages
+  - matplotlib
+  - numpy
+  - pandas
+
+  ##### Machine Learning packages
+  - scikit-learn
+  - pytorch
+
+  ##### NLP packages
+  - nltk
+  - spacy
+
+  ##### Pip only packages:
+  - pip:
+    - fastapi
+    - uvicorn
+```
 
 ### Nvidia CUDA
 
