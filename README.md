@@ -11,6 +11,12 @@
 * [`cuda9.1-cudnn7-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-cudnn7-devel-python3.6/Dockerfile)
 * [`cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-python3.6-tensorflow/Dockerfile)
 
+## Deprecation Warning 🚨
+
+I'm currently not using this Docker image, so I won't be able to keep it updated or add changes any time soon.
+
+You might still find some internal pieces of code useful for your own use cases and your own Docker images.
+
 # uvicorn-gunicorn-machine-learning
 
 [**Docker**](https://www.docker.com/) image with [**Uvicorn**](https://www.uvicorn.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning.
