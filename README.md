@@ -1,3 +1,9 @@
+## 🚨 DEPRECATION WARNING 🚨
+
+I'm currently not using this Docker image, so I won't be able to keep it updated or add changes any time soon.
+
+You might still find some internal pieces of code useful for your own use cases and your own Docker images.
+
 [![Build Status](https://travis-ci.org/tiangolo/uvicorn-gunicorn-machine-learning-docker.svg?branch=master)](https://travis-ci.org/tiangolo/uvicorn-gunicorn-machine-learning-docker)
 
 ## Supported tags and respective `Dockerfile` links
@@ -10,12 +16,6 @@
 * [`cuda9.1-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-devel-python3.6/Dockerfile)
 * [`cuda9.1-cudnn7-devel-python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-cudnn7-devel-python3.6/Dockerfile)
 * [`cuda9.1-python3.6-tensorflow` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-machine-learning-docker/blob/master/cuda9.1-python3.6-tensorflow/Dockerfile)
-
-## Deprecation Warning 🚨
-
-I'm currently not using this Docker image, so I won't be able to keep it updated or add changes any time soon.
-
-You might still find some internal pieces of code useful for your own use cases and your own Docker images.
 
 # uvicorn-gunicorn-machine-learning
 
